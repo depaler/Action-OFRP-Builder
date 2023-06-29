@@ -106,7 +106,7 @@ jobs:
     - name: Building recovery
       run: |
         cd ${{ steps.pwd.outputs.workspace-folder }}/fox_${{ github.event.inputs.MANIFEST_BRANCH }}
-        curl http://192.168.10.1:5244/d/download/Image.gz-dtb --output devices/oppo/sdm660-common/prebuilt/Image.gz-dtb        
+        curl http://192.168.10.1:5244/d/download/Image.gz-dtb --output device/oppo/sdm660-common/prebuilt/Image.gz-dtb        
         set +e
         source build/envsetup.sh
         export ALLOW_MISSING_DEPENDENCIES=true
